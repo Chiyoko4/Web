@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "buildCommand": "npm run build",
+    "outputDirectory": "assets",
+    "rewrites": [
+      {
+        "source": "/api/(.*)",
+        "destination": "login.php"
+      },
+      {
+        "source": "/(.*)",
+        "destination": "login.php"
+      }
+    ]
+  }
