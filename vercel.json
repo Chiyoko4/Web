@@ -1,15 +1,14 @@
 {
     "version": 2,
-    "buildCommand": "npm run build",
-    "outputDirectory": "assets",
-    "rewrites": [
-      {
-        "source": "/api/(.*)",
-        "destination": "login.php"
-      },
-      {
-        "source": "/(.*)",
-        "destination": "login.php"
-      }
+    "functions": {
+        "*.php": {
+            "runtime": "vercel-php@0.7.4"
+        }
+    },
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/$1"
+        }
     ]
-  }
+}
